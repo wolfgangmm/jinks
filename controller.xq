@@ -27,7 +27,7 @@ else if (matches($exist:path, "\.(json|js|md|png|svg)$", "s")) then
 (: all other requests are passed on the Open API router :)
 else
     <dispatch xmlns="http://exist.sourceforge.net/NS/exist">
-        <forward url="{$exist:controller}/modules/api.xql">
+        <forward url="{$exist:controller}/modules/api.xq">
             <set-header name="Access-Control-Allow-Origin" value="{$allowOrigin}"/>
             { if ($allowOrigin = "*") then () else <set-header name="Access-Control-Allow-Credentials" value="true"/> }
             <set-header name="Access-Control-Allow-Methods" value="GET, POST, DELETE, PUT, PATCH, OPTIONS"/>
