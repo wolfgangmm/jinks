@@ -9,5 +9,5 @@ declare variable $dir external;
 (: the target collection into which the app is deployed :)
 declare variable $target external;
 
-sm:chgrp(xs:anyURI($target || "/modules/api.xql"), "dba"),
-sm:chmod(xs:anyURI($target || "/modules/api.xql"), "rwxr-Sr-x")
+sm:chgrp(xs:anyURI($target || "/modules/api.xq"), "dba"),
+sm:chmod(xs:anyURI($target || "/modules/api.xq"), "rwxr-Sr-x")
